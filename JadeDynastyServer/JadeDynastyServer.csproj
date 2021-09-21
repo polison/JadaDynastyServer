@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{356EE603-BE75-412D-9DEA-3917FF08BC88}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JadeDynastyServer</RootNamespace>
+    <AssemblyName>JadeDynastyServer</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Game\GameObject.cs" />
+    <Compile Include="JadeDynastyServer.cs" />
+    <Compile Include="Network\SocketManager.cs" />
+    <Compile Include="Network\WorldSocket.cs" />
+    <Compile Include="Packet\BasePacket.cs" />
+    <Compile Include="Packet\GamePacket\GamePacket.cs" />
+    <Compile Include="Packet\GamePacket\ServerPacket\HeadInfoPacket.cs" />
+    <Compile Include="Packet\SocketPacket\AccountInfoPacket.cs" />
+    <Compile Include="Packet\SocketPacket\AuthPacket.cs" />
+    <Compile Include="Packet\SocketPacket\CreateRolePacket.cs" />
+    <Compile Include="Packet\SocketPacket\CreateRoleReplyPacket.cs" />
+    <Compile Include="Packet\SocketPacket\GameLogicPacket.cs" />
+    <Compile Include="Packet\SocketPacket\GetRolePacket.cs" />
+    <Compile Include="Packet\SocketPacket\GetRoleReplyPacket.cs" />
+    <Compile Include="Packet\SocketPacket\LinePacket.cs" />
+    <Compile Include="Packet\SocketPacket\LinkPacket.cs" />
+    <Compile Include="Packet\SocketPacket\LoginPacket.cs" />
+    <Compile Include="Packet\SocketPacket\PingPacket.cs" />
+    <Compile Include="Packet\SocketPacket\SocketPacket.cs" />
+    <Compile Include="Tools\ByteBuffer.cs" />
+    <Compile Include="Tools\ByteReader.cs" />
+    <Compile Include="Tools\GamePacketManager.cs" />
+    <Compile Include="Tools\ILog.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\MPPC.cs" />
+    <Compile Include="Tools\RC4.cs" />
+    <Compile Include="Tools\ServerSettings.cs" />
+    <Compile Include="Tools\SocketPacketManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Packet\GamePacket\ClientPacket\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
