@@ -14,3 +14,7 @@ https://pgp.wmupd.com/zhuxian/patch/ec_patch_1738-1760.zup<br/>
 1.安装Vusial Studio 2019 及以上版本，安装.NET桌面开发组件 安装 .net5 运行时组件。<br/>
 2.安装Mysql并导入项目中的data.sql文件。<br/>
 3.编译运行，客户端使用上面的版本。<br/>
+
+#额外资源
+
+<a href="https://pan.baidu.com/s/1IaGpJfDE0iOpzDALoREdpw?pwd=1524">通过百度网盘分享的文件：ZX</a>
